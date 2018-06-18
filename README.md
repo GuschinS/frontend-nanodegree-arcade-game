@@ -1,6 +1,21 @@
 frontend-nanodegree-arcade-game
 ===============================
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+# Welcome to the Classic Arcade Game Clone!
+
+## Table of Contents
+
+* [Instructions](#instructions)
+* [How to Play](#how_to_play)
+
+## Instructions
+
+The player must go to the top, avoiding a collision with the bugs.
+In a collision, the player loses 1 life. 3 collisions - the end of the game.
+When a player reaches the top, he gets 10 points and returns to the starting position. Each time, the speed of beetles increases.
+
+## How to Play
+
+You just need to click on the [link](https://guschins.github.io/frontend-nanodegree-arcade-game/) to start playing!
+
