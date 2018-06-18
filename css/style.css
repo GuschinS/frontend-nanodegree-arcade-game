@@ -1,3 +1,99 @@
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html,
 body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Coda', cursive;
     text-align: center;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+/*	flex-direction: column;*/
+}
+
+.score-panel {
+	display: flex;
+	text-align: left;
+	width: 500px;
+	margin-top: 20px;
+}
+
+.score-panel #hearts {
+	margin: 0;
+	padding: 0;
+/*	display: inline-block;*/
+}
+
+.score-panel #hearts li {
+	list-style: none;
+	width: 20px;
+	display: inline-block;
+}
+
+#hearts li img {
+	width: 20px;
+}
+
+#hearts li img.none {
+	display: none;
+}
+
+.mov {
+	margin: 2% 0 0 5%;
+}
+
+/*
+ * Modal Windows
+ */
+
+#end {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background: #fff;
+	opacity: 0.9;
+	text-align: center;
+}
+
+#gameover {
+	position: relative;
+	/*	float: left;*/
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 10%;
+	font-size: 3em;
+}
+
+.ok {
+	width: 10em;
+	height: 4em;
+	border-radius: 10%;
+	z-index: 9999;
+}
+
+.ok:hover {
+	background-color: #02ccba;
 }

@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Effective JavaScript: Frogger</title>
-    <link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<title>Effective JavaScript: Frogger</title>
+	<link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <script src="js/resources.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/engine.js"></script>
+	<div id="end" style="display:none;">
+		<div id="gameover">
+			<div>Game over!</div>
+			<div class="score">000</div>
+			<br>
+			<input class="ok" type="submit" value="OK" onClick="getElementById('end').style.display='none';">
+		</div>
+	</div>
+	<div class="container">
+		<section class="score-panel">
+			<ul id="hearts">
+				<li><img class="yes" src="images/Heart.png"></li>
+				<li><img class="yes" src="images/Heart.png"></li>
+				<li><img class="yes" src="images/Heart.png"></li>
+			</ul>
+			<div class="mov">Score: <span id="score">0</span></div>
+		</section>
+	</div>
+	<script src="js/resources.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/engine.js"></script>
 </body>
+
 </html>

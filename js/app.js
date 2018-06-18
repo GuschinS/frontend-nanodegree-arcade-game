@@ -20,17 +20,49 @@ Enemy.prototype.update = function (dt) {
 	// Create a new enemy with different speed
 	if (this.x < -100) {
 		this.x = 700;
-		this.speed = 50 + Math.floor(Math.random() * 500);
+		this.speed = Math.floor(Math.random() * 300 + speedEnemy);
 	}
 	// Check for a collision between the player and opponents. Return the player to the starting position
 	if (player.x < this.x + 50 &&
 		player.x + 50 > this.x &&
 		player.y < this.y + 30 &&
-		30 + player.y > this.y) {
-		player.x = 300;
-		player.y = 500;
+		player.y + 30 > this.y) {
+		lives();
+//		console.log(heart);
 	}
 };
+
+function lives() {
+	const hearts = live.getElementsByTagName('img');
+	if (i < 3) {
+		hearts[i].className = 'none';
+		i = i + 1;
+	}
+	heart = heart - 1;
+	player.x = 300;
+	player.y = 500;
+	if (heart === 0) {
+		end();
+	}
+}
+
+function allLives() {
+	const hearts = live.getElementsByTagName('img');
+	for (i = 0; i < hearts.length; i++) {
+		hearts[i].className = 'yes';
+	}
+}
+
+function end() {
+	endGame.removeAttribute('style');
+	scorend.textContent = 'Final Score: ' + score;
+	score = 0;
+	heart = 3;
+	mov.textContent = score;
+	speedEnemy = 100;
+	allLives();
+	i = 0;
+}
 
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function () {
@@ -65,6 +97,9 @@ Player.prototype.update = function () {
 	if (this.y < 0) {
 		this.x = 300;
 		this.y = 400;
+		score += 10;
+		mov.textContent = score;
+		speedEnemy = speedEnemy + 10;
 	}
 };
 
@@ -93,14 +128,22 @@ Player.prototype.handleInput = function (keyPress) {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-var allEnemies = [];
+const allEnemies = [];
 // Position "y" where the enemies will are created
-var enemyPosition = [60, 140, 220, 300];
-var player = new Player(300, 400, 50);
-var enemy;
+const enemyPosition = [60, 140, 220, 300];
+const player = new Player(300, 400, 50);
+const mov = document.querySelector('#score');
+const scorend = document.querySelector('.score');
+const endGame = document.querySelector('#end');
+const live = document.querySelector('#hearts');
+let heart = 3;
+let enemy;
+let speedEnemy = 100;
+let score = 0;
+let i = 0;
 
 enemyPosition.forEach(function (posY) {
-	enemy = new Enemy(500, posY, 50 + Math.floor(Math.random() * 500));
+	enemy = new Enemy(700, posY, Math.floor(Math.random() * 300 + speedEnemy));
 	allEnemies.push(enemy);
 });
 
