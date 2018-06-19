@@ -21,6 +21,6 @@ You just need to click on the [link](https://guschins.github.io/frontend-nanodeg
 
 Clone or download this repository
 
-![Clone or download](https://github.com/GuschinS/frontend-nanodegree-arcade-game/tree/master/images/zip.png)
+![Clone or download](https://github.com/GuschinS/frontend-nanodegree-arcade-game/blob/master/images/zip.png)
 
 and open index.html in your favorite browser to play!
