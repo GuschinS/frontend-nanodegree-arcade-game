@@ -13,10 +13,14 @@ When a player reaches the top, he gets 10 points and returns to the starting pos
 
 ## How to Play
 
+###### Live
+
 You just need to click on the [link](https://guschins.github.io/frontend-nanodegree-arcade-game/) to start playing!
+
+###### Lokal
 
 Clone or download this repository
 
 ![Clone or download](https://github.com/GuschinS/frontend-nanodegree-arcade-game/tree/master/images/zip.png)
 
-and open index.html in your favorite browser to play
+and open index.html in your favorite browser to play!
